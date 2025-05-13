@@ -4,7 +4,7 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'seqlibJaPa'
-version = '0.1.0'
+version = '0.1.1'
 authors = [
   { name = 'Jan Pamuła', email = 'jan.pamula@student.uj.edu.pl' }
 ]
