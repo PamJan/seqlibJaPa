@@ -219,7 +219,7 @@ class Seq:
             # We need to remember to decrease the key value
             # by one to translate it from GenBank to Python.
             return self.seq[key-1]
-
+            
     # The special method which will be invoked when two objects of the DNASeq 
     # type are being added, eg. seq_3 = seq_1 + seq_2. 
     def __add__(self, other):
