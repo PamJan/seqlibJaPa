@@ -220,28 +220,28 @@ class Seq:
             # by one to translate it from GenBank to Python.
             return self.seq[key-1]
 
-        # The special method which will be invoked when two objects of the DNASeq 
-        # type are being added, eg. seq_3 = seq_1 + seq_2. 
-        def __add__(self, other):
-            # seqid will be seqids of added objects,
-            # separated by an underscore
-            seqid = f'{self.seqid}_{other.seqid}'
-            
-            # title will be titles of added objects,
-            # separated by an underscore
-            title = f'{self.title}_{other.title}'
+    # The special method which will be invoked when two objects of the DNASeq 
+    # type are being added, eg. seq_3 = seq_1 + seq_2. 
+    def __add__(self, other):
+        # seqid will be seqids of added objects,
+        # separated by an underscore
+        seqid = f'{self.seqid}_{other.seqid}'
+        
+        # title will be titles of added objects,
+        # separated by an underscore
+        title = f'{self.title}_{other.title}'
 
-            # seq will simply be a concatenation of both sequences
-            # stored within the added objects
-            seq = f'{self.seq}{other.seq}'
+        # seq will simply be a concatenation of both sequences
+        # stored within the added objects
+        seq = f'{self.seq}{other.seq}'
 
-            # returning the reference to the new object.
-            return DNASeq(seqid, title, seq)
+        # returning the reference to the new object.
+        return DNASeq(seqid, title, seq)
 
-        # custom method copy() that will return an exact copy
-        # of the existing object (as a type(self) type object).
-        def copy(self):
-            return DNASeq(self.seqid, self.title, self.seq)
+    # custom method copy() that will return an exact copy
+    # of the existing object (as a type(self) type object).
+    def copy(self):
+        return DNASeq(self.seqid, self.title, self.seq)
             
 # decide on what will be exposed as module content (here, only the Seq class)
 __all__ = [ 'Seq' ]
