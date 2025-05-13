@@ -10,7 +10,7 @@ It can be used for:
 
 '''
 
-from seqlibFiLa.Seq import Seq
+from seqlibJaPa.Seq import Seq
 
 __version__ = '0.1.0'
 __license__ = 'GPL-3.0-or-later'
