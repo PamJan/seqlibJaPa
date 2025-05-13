@@ -241,7 +241,7 @@ class Seq:
         # custom method copy() that will return an exact copy
         # of the existing object (as a type(self) type object).
         def copy(self):
-        return DNASeq(self.seqid, self.title, self.seq)
+            return DNASeq(self.seqid, self.title, self.seq)
             
 # decide on what will be exposed as module content (here, only the Seq class)
 __all__ = [ 'Seq' ]
